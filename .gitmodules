@@ -2,7 +2,3 @@
   path = ext/mathematical/lasem
   url = git://git.gnome.org/lasem
   ignore = dirty
-[submodule "ext/mathematical/mtex2MML"]
-	path = ext/mathematical/mtex2MML
-	url = https://github.com/tadiou/mtex2MML
-  ignore = dirty
