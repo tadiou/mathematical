@@ -15,8 +15,8 @@ find_package(PkgConfig)
 include(FindNewerRubies.cmake)
 
 set(LASEM_SRC_DIR ${CMAKE_SOURCE_DIR}/lasem/src/)
-set(MTEX2MML_SRC_DIR ${CMAKE_SOURCE_DIR}/mtex2MML/src/)
-set(MTEX2MML_BUILD_DIR ${CMAKE_SOURCE_DIR}/mtex2MML/build/)
+set(MTEX2MML_SRC_DIR ~/mtex2MML/src/)
+set(MTEX2MML_BUILD_DIR ~/mtex2MML/build/)
 set(INCLUDE_DIRS ${INCLUDE_DIRS} ${RUBY_INCLUDE_PATH} ${MTEX2MML_SRC_DIR} ${LASEM_SRC_DIR})
 
 file(GLOB_RECURSE LASEM_SRC ${LASEM_SRC_DIR}/*.c)
