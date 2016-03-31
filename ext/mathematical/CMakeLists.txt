@@ -14,16 +14,16 @@ set(VERSION 0.6)
 find_package(PkgConfig)
 include(FindNewerRubies.cmake)
 
-set(LASEM_SRC_DIR ~/lasem/src/)
-set(MTEX2MML_SRC_DIR ~/mtex2MML/src/)
-set(MTEX2MML_BUILD_DIR ~/mtex2MML/build/)
+set(LASEM_SRC_DIR ${CMAKE_SOURCE_DIR}/lasem/src/)
+set(MTEX2MML_SRC_DIR ${CMAKE_SOURCE_DIR}/mtex2MML/src/)
+set(MTEX2MML_BUILD_DIR ${CMAKE_SOURCE_DIR}/mtex2MML/build/)
 set(INCLUDE_DIRS ${INCLUDE_DIRS} ${RUBY_INCLUDE_PATH} ${MTEX2MML_SRC_DIR} ${LASEM_SRC_DIR})
 
 file(GLOB_RECURSE LASEM_SRC ${LASEM_SRC_DIR}/*.c)
 file(GLOB_RECURSE LASEM_HEADERS ${LASEM_SRC_DIR}/*.h)
 list(REMOVE_ITEM LASEM_SRC "${LASEM_SRC_DIR}/lasemrender.c")
 list(REMOVE_ITEM LASEM_SRC "${LASEM_SRC_DIR}/lsmitex.c")
-list(APPEND LASEM_SRC "~/lasem_overrides.c")
+list(APPEND LASEM_SRC "${CMAKE_SOURCE_DIR}/lasem_overrides.c")
 
 # If you're reading this and it's giving you errors, fix it and send
 # me the patch.  Much appreciated.
